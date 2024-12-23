@@ -1,7 +1,18 @@
 import numpy as np
 from lr_test_utils import test
 
-def sigmoid_test(target):
+def feature_matrix_test(target):
+    # expected_output=(2,5)
+    success = 0
+
+    try:
+        assert isinstance(*target, np.ndarray)
+        success += 1
+
+    except:
+        print("Error: Datatype mismatch! Should be a numpy array")
+
+def sig_test(target):
     x = np.array([1, 2, 3])
     expected_output = np.array([0.73105858,
                                 0.88079708,
@@ -28,8 +39,7 @@ def sigmoid_test(target):
     ]
     
     test(test_cases, target)
-    
-            
+                
 ### ex 4        
 def sigmoid_derivative_test(target):
     x = np.array([1, 2, 3])

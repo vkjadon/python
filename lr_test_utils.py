@@ -19,6 +19,7 @@ def test(test_cases, target):
             print("Error: " + test_case['error'])
             
     if success == len(test_cases):
+        # \033[ starts the escape sequence - 92 Green, 
         print("\033[92m All tests passed.")
     else:
         print('\033[92m', success," Tests passed")
