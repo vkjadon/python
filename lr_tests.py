@@ -1,28 +1,6 @@
 import numpy as np
-from test_utils import test
+from lr_test_utils import test
 
-### ex 2        
-def basic_sigmoid_test(target):
-    x = 1
-    expected_output = 0.7310585786300049
-    test_cases = [
-        {
-            "name": "datatype_check",
-            "input": [x],
-            "expected": float,
-            "error": "Datatype mismatch."
-        },
-        {
-            "name": "equation_output_check",
-            "input": [x],
-            "expected": expected_output,
-            "error": "Wrong output."
-        }
-    ]
-    
-    test(test_cases, target)
-
-### ex 3    
 def sigmoid_test(target):
     x = np.array([1, 2, 3])
     expected_output = np.array([0.73105858,
