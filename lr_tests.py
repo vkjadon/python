@@ -6,7 +6,7 @@ def feature_matrix_test(target):
     success = 0
 
     try:
-        assert isinstance(*target, np.ndarray)
+        assert isinstance(target, np.ndarray)
         success += 1
 
     except:
